@@ -141,4 +141,10 @@ p {
     background-color: var(--card-bg);
     background-repeat: repeat-x;
   }
+  .yearly-price span{
+    margin-right: 20px;
+  }
 }
+  .price a{
+    margin-left: 20px;
+  }
