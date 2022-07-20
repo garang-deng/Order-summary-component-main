@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --desktop-image: url(imgages/pattern-background-desktop.svg);
+  --mobile-image: url(imgages/pattern-background-mobile.svg);
+  --price-bg: hsl(225, 100%, 98%);
+  --button-clr: hsl(245, 75%, 52%);
+  --card-bg: hsl(225, 100%, 94%);
+  --paragraph-clr: hsl(224, 23%, 55%);
+  --header-clr: hsl(223, 47%, 23%);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 10% auto;
+  padding: 0;
+  text-align: center;
+  line-height: 1.5;
+}
+.card-container {
+  max-width: 90%;
+  height: 120vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-color: hsla(225, 100%, 94%);
+  background-repeat: repeat-x;
+  padding: 40px;
+  margin: 6% auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  max-width: 320px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.085);
+  margin: 0 auto;
+}
+.card img {
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.text {
+  margin: 20px;
+}
+h1 {
+  font-weight: 900;
+  font-size: 1.475rem;
+  margin-top: 10px;
+  color: var(--header-clr);
+}
+p {
+  color: var(--p-clr);
+  margin: 10px 0;
+  opacity: 0.6;
+}
+.price {
+  display: flex;
+  align-items: center;
+  background: var(--price-bg);
+  padding: 10px;
+  border-radius: 10px;
+}
+.yearly-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.yearly-price span {
+  display: block;
+  margin-right: 30px;
+  margin-left: 10px;
+}
+.yearly-price span:first-child {
+  font-weight: 700;
+}
+.yearly-price span:last-child {
+  color: var(--p-clr);
+  opacity: 0.6;
+}
+.yearly-price img {
+  color: var(--card-bg);
+  width: 30px;
+}
+.price a {
+  margin-left: 30px;
+  color: var(--button-clr);
+}
+.price a:hover {
+  text-decoration: none;
+  color: rgb(140, 58, 216);
+}
+.payment {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+.payment button {
+  font-weight: 700;
+  grid-column: span 3;
+  grid-row: 1;
+  height: 3em;
+  width: 100%;
+  margin: 20px 0;
+  background: var(--button-clr);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 6px 6px rgba(109, 29, 184, 0.175);
+}
+.payment button:hover {
+  background-color: rgb(140, 58, 216);
+}
+.payment a {
+  font-weight: 700;
+  grid-column: span 3;
+  grid-row: 2;
+  text-decoration: none;
+  max-width: 100%;
+  color: var(--p-clr);
+  opacity: 0.6;
+}
+.payment a:hover {
+  color: var(--header-clr);
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .card-container {
+    background-image: url(images/pattern-background-mobile.svg);
+    background-color: var(--card-bg);
+    background-repeat: repeat-x;
+  }
+}
